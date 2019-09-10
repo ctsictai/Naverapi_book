@@ -18,6 +18,7 @@ class Book(models.Model):
 
 class Author(models.Model):
     name = models.CharField(max_length=50)
+    states = models.CharField(max_length=5, null=True, blank=True)
 
     def __str__(self):
         return self.name
