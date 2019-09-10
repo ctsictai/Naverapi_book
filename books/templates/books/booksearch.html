@@ -10,10 +10,12 @@
     <div>
       {{ forloop.counter }}
       <!-- for문 반복한 횟수를 나타냄 -->
-      <img src="{{ item.image }}" alt="" width="110" height="141" /> :
-      {{ item.title }} : {{ item.isbn }} : {{ item.author }} :
-      {{ item.publisher }} : {{ item.pubdate }} 가격 : {{ item.price }} 할인가격
-      : {{ item.discount }}
+      <a href="{{ item.link }}" target="blank"
+        ><img src="{{ item.image }}" alt="" width="110" height="141"
+      /></a>
+      {{ item.title }} | ISBN : {{ item.isbn }} | {{ item.author }} |
+      {{ item.publisher }} | 출판일 : {{ item.pubdate }} | 가격 :
+      {{ item.price }} | 할인가격 : {{ item.discount }}
     </div>
   </ul>
   {% endfor %}

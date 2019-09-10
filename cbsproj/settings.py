@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bb@ol-j47y)n2@rn*s)7#3pbmhz48=nqaqr=1y*4&a5-1@2nni'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -119,3 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# key는 여기다가 한꺼번에 관리하는게 편하다
+NAVERBOOK_CLIENT_ID = os.getenv("NAVERBOOK_CLIENT_ID")
+NAVERBOOK_CLIENT_SECRET = os.getenv("NAVERBOOK_CLIENT_SECRET")

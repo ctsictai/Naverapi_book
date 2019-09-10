@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}Books Application Site{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'admin/css/base.css' %}" />
+  </head>
+
+  <body>
+    <div id="sidebar">
+      {% block sidebar %}
+      <ul>
+        <li><a href="/">Project_Home</a></li>
+        <li><a href="/admin/">Admin</a></li>
+        <li><a href="/book/">Books_Home</a></li>
+        <li><a href="/author/">Author_Home</a></li>
+        <li><a href="/publisher/">Publisher_Home</a></li>
+      </ul>
+      {% endblock %}
+      <br />
+    </div>
+
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

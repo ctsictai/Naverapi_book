@@ -3,12 +3,30 @@ from django.http import HttpResponse
 import json
 import urllib.request
 from django.conf import settings
+# 제너릭 뷰(템플릿, 리스트)사용하기 위한
+from django.views.generic.base import TemplateView
+from django.views.generic import ListView
+# 모델 클래스 테이블과 연계 로직
+from books.models import Book, Author, Publisher
 
 # Create your views here.
 
 
 def index(request):
     return HttpResponse("Books Space")
+
+
+#--- ListView
+class BookList(ListView):
+    model = Book
+
+
+class AuthorList(ListView):
+    model = Author
+
+
+class PublisherList(ListView):
+    model = Publisher
 
 
 def booksearch(request):
